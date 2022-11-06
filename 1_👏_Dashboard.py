@@ -31,7 +31,7 @@ histogram = pd.read_csv(r'https://raw.githubusercontent.com/sugam21/Game_Recomme
 
 r11, r12 = st.columns((5, 5))
 with r11:
-    age_count_plot = pd.read_csv(r"data_files\age_countplot.csv")
+    age_count_plot = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/age_countplot.csv")
     st.markdown('## BarChart')
     fig = sns.barplot(x='age', y='count', data=age_count_plot,
                       color='#D87385', width=1.2)
@@ -47,7 +47,7 @@ with r11:
 
 with r12:
     st.markdown('## Donut Chart')
-    donut_graph = pd.read_csv(r"data_files\pie.csv")
+    donut_graph = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/pie.csv")
     explode = (0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02)
     plt.pie(x=donut_graph['Values'], labels=donut_graph['Name'],
             pctdistance=0.5, radius=0.5,
@@ -66,7 +66,7 @@ with r12:
 
 
 # ROW 3RD FOR LINE CHART
-line = pd.read_csv(r'data_files\line.csv')
+line = pd.read_csv(r'https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/line.csv')
 
 st.markdown("## Line Chart")  # Setting up the title
 r21, r22 = st.columns((5, 5))  # Fot the first two figures of the bar graph
@@ -98,13 +98,13 @@ with r32:
 r51, r52 = st.columns(2)
 with r51:
     plt.figure(figsize=(9, 3))
-    max_community_histogram = pd.read_csv(r"data_files\histogram.csv")
+    max_community_histogram = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/histogram.csv")
     sns.distplot(x=max_community_histogram['max_community'])
     plt.xlabel("minimum age")
     st.pyplot()
 
 with r52:
-    age = pd.read_csv(r"data_files\age.csv")
+    age = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/age.csv")
     plost.line_chart(data=age, x='minage', y="totalvotes",
                      use_container_width=True, width=600, height=250,
                      title='Minimum age vs total votes')
@@ -113,20 +113,20 @@ with r52:
 st.markdown("## Bar Graph")
 r41, r42 = st.columns(2)
 with r41:
-    name_max_community = pd.read_csv(r"data_files\name_max_community.csv")
+    name_max_community = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/name_max_community.csv")
     plost.bar_chart(bar='name', value='max_community', data=name_max_community,
                     direction='horizontal', width=500, color="#749F82")
 
 with r42:
     total_votes_name = pd.read_csv(
-        r"data_files\name_max_community_with_total_votes.csv")
+        r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/name_max_community_with_total_votes.csv")
     plost.bar_chart(bar='name', value='totalvotes', data=total_votes_name,
                     direction='horizontal', width=500, color='#7D6E83')
 
 
 # BArGraph
 plt.figure(figsize=(15, 5))
-awards = pd.read_csv(r"data_files\awards.csv")
+awards = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/awards.csv")
 ax = sns.barplot(x='name', y='boardgamehonor_cnt', data=awards, palette='Set3')
 ax.set_xticklabels(awards['name'], rotation=90, fontsize=7)
 ax.set_yticklabels(range(0, 51, 10), rotation=90, fontsize=7)
