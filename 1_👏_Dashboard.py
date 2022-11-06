@@ -26,8 +26,8 @@ col3.metric("Total Blogs Published", "20")
 #col4.metric("Total News Published", "10")
 
 # ROW 2ND FOR BAR CHART AND HISTOGRAM
-name_max_community = pd.read_csv(r'data_files\name_max_community.csv')
-histogram = pd.read_csv(r'data_files\histogram.csv')
+name_max_community = pd.read_csv(r'https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/name_max_community.csv')
+histogram = pd.read_csv(r'https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/histogram.csv')
 
 r11, r12 = st.columns((5, 5))
 with r11:
