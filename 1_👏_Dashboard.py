@@ -41,6 +41,7 @@ with r11:
     plt.xlabel('age', fontsize=10)
     plt.ylabel('count', fontsize=10)
     sns.despine()
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
     st.write(fig)
 
@@ -61,7 +62,7 @@ with r12:
     fig.gca().add_artist(centre_circle)
     plt.title("Count of categories", fontsize=10)
     plt.tight_layout()
-
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
 
 
@@ -101,6 +102,7 @@ with r51:
     max_community_histogram = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/histogram.csv")
     sns.distplot(x=max_community_histogram['max_community'])
     plt.xlabel("minimum age")
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
 
 with r52:
@@ -132,4 +134,5 @@ ax.set_xticklabels(awards['name'], rotation=90, fontsize=7)
 ax.set_yticklabels(range(0, 51, 10), rotation=90, fontsize=7)
 ax.set_xlabel(xlabel='Name', fontsize=7)
 ax.set_ylabel('Total Award Received', fontsize=7)
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.pyplot()
