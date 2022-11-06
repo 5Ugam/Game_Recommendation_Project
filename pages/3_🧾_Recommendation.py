@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Importing the dataset
-df = pd.read_csv(r"data_files\recommender.csv")
+df = pd.read_csv(r"https://raw.githubusercontent.com/sugam21/Game_Recommendation_Project/main/data_files/recommender.csv")
 
 # Elements in the webiste
 
